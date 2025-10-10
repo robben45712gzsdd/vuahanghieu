@@ -1,40 +1,60 @@
 <template>
   <div class="w-100">
-    <!-- Header -->
-    <header id="main-header" class="bg-white py-5">
-      <div class="container">
+  <!-- Header -->
+    <header id="main-header" class="bg-white">
+      <!-- Top black bar -->
+      <div class="bg-dark py-1 text-white">
+        <div class="d-flex justify-content-end container">
+          <ul class="nav">
+            <!-- Shop -->
+            <li class="nav-item">
+              <a class="text-warning text-uppercase nav-link" href="/createShop">Tạo Shop</a>
+            </li>
+
+            <!-- Tài khoản with dropdown -->
+            <li class="nav-item dropdown">
+              <a class="text-white text-uppercase nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Tài khoản
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="text-uppercase dropdown-item" href="/login">Đăng nhập</a></li>
+                <li><a class="text-uppercase dropdown-item" href="/signup">Đăng ký</a></li>
+              </ul>
+            </li>
+
+            <!-- Giỏ hàng -->
+            <li class="nav-item">
+              <a class="d-flex align-items-center text-white text-uppercase nav-link" href="/cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" c fill="currentColor" class="me-2 bi bi-cart3"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                </svg>
+                Giỏ hàng
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="py-5 container">
         <div class="d-flex align-items-center justify-content-between row">
           <!-- Logo -->
           <nuxt-link to="/" class="d-flex align-items-center mb-2 mb-md-0 col-md-3 col-12">
-            <img
-              src="@/assets/images/vuahanghieu-new.svg"
-              alt="logo"
-              class="img-fluid"
-              style="max-height: 50px"
-            />
+            <img src="@/assets/images/vuahanghieu-new.svg" alt="logo" class="img-fluid" style="max-height: 50px" />
           </nuxt-link>
 
           <!-- Search bar -->
           <div class="mb-2 mb-md-0 col-md-6 col-12">
             <div class="input-group">
-              <input
-                type="text"
-                class="form-control header-search"
-                placeholder="Tìm kiếm sản phẩm, thương hiệu..."
-              />
+              <input type="text" class="form-control header-search" placeholder="Tìm kiếm sản phẩm, thương hiệu..." />
               <div class="input-group-append d-flex align-items-center">
                 <button class="btn btn-dark btn-search" type="button">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-search"
-                    viewBox="0 0 16 16"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-search" viewBox="0 0 16 16">
                     <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                    />
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                   </svg>
                 </button>
               </div>
@@ -42,37 +62,19 @@
           </div>
 
           <!-- Auth box -->
-          <div
-            class="d-flex justify-content-md-end justify-content-start mt-3 mt-md-0 col-md-3 col-12"
-          >
-            <div
-              class="d-flex align-items-center shadow-sm rounded-pill auth-box"
-            >
-              <nuxt-link
-                to="/login"
-                class="d-flex align-items-center px-2 py-1 text-decoration-none auth-link"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  class="me-2 bi bi-person-circle"
-                  viewBox="0 0 16 16"
-                >
+          <div class="d-flex justify-content-md-end justify-content-start mt-3 mt-md-0 col-md-3 col-12">
+            <div class="d-flex align-items-center shadow-sm rounded-pill auth-box">
+              <nuxt-link to="/login" class="d-flex align-items-center px-2 py-1 text-decoration-none auth-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                  class="me-2 bi bi-person-circle" viewBox="0 0 16 16">
                   <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                  <path
-                    fill-rule="evenodd"
-                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                  />
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg>
                 <span>Đăng nhập</span>
               </nuxt-link>
               <span class="divider"></span>
-              <nuxt-link
-                to="signup"
-                class="d-flex align-items-center px-2 py-1 text-decoration-none auth-link"
-              >
+              <nuxt-link to="signup" class="d-flex align-items-center px-2 py-1 text-decoration-none auth-link">
                 <span>Đăng ký</span>
               </nuxt-link>
             </div>
@@ -80,12 +82,13 @@
         </div>
       </div>
     </header>
-    <div class="container py-5">
-      <div class="row">
+
+    <div class="py-5 container">
+      <div class="gap-4 row">
         <div class="col-md-6">
           <div class="card">
             <div class="card-body">
-              <h2 class="card-title text-center">
+              <h2 class="text-center card-title">
                 Thông tin đăng ký tài khoản
               </h2>
               <form>
@@ -157,7 +160,7 @@
                     khoản và chính sách của chúng tôi.</label
                   >
                 </div>
-                <button type="submit" class="btn btn-dark w-100">
+                <button type="submit" class="w-100 btn btn-dark">
                   ĐĂNG KÝ
                 </button>
               </form>
@@ -166,12 +169,12 @@
         </div>
         <div class="col-md-6">
           <div class="card">
-            <div class="card-body text-center">
+            <div class="text-center card-body">
               <h2 class="card-title">Hoặc đăng nhập bằng</h2>
-              <button class="btn btn-primary w-100 mb-3">
+              <button class="mb-3 w-100 btn btn-primary">
                 Đăng nhập bằng Facebook
               </button>
-              <button class="btn btn-danger w-100">
+              <button class="w-100 btn btn-danger">
                 Đăng nhập bằng Google
               </button>
               <hr />
