@@ -325,7 +325,7 @@
               >
             </div>
 
-            <div class="d-flex">
+            <div class="d-flex product-price">
               <!-- Cột trái -->
               <div class="w-50 pe-3">
                 <!-- Giá -->
@@ -639,7 +639,7 @@
           </div>
         </div>
         <!-- Product Description and Tabs -->
-        <div class="d-flex gap-5">
+        <div class="d-flex gap-5 product-description">
           <div class="mt-5 col-md-8">
             <ul class="nav nav-tabs">
               <li class="nav-item">
@@ -862,7 +862,6 @@
         <div class="py-4 container suggested-products">
           <h3
             class="m-auto mb-3 pb-2 border-3 border-black border-bottom text-center fw-normal"
-            style="width: max-content"
           >
             Sản phẩm khác của gian hàng The Signature Hub
           </h3>
@@ -1523,26 +1522,26 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
-import { products } from '../../constants/product'
+import VueSlickCarousel from "vue-slick-carousel";
+import { products } from "../../constants/product";
 export default {
   components: { VueSlickCarousel },
-  layout: 'nonelayout',
+  layout: "nonelayout",
   data() {
     return {
       //dropdown search
       showDropdown: false,
-      searchQuery: '',
+      searchQuery: "",
       trendingLinks: [
         {
-          url: '/voucher',
-          title: 'Tặng Voucher Ưu Đãi 150K [9/10 - 15/10/2025]',
+          url: "/voucher",
+          title: "Tặng Voucher Ưu Đãi 150K [9/10 - 15/10/2025]",
         },
         {
-          url: '/flash-sale',
-          title: 'Loa Marshall: 1 Đổi 1 - Bảo Hành 12 Tháng',
+          url: "/flash-sale",
+          title: "Loa Marshall: 1 Đổi 1 - Bảo Hành 12 Tháng",
         },
-        { url: '/new-arrivals', title: 'Ưu Đãi Giá SỐC - OFF tới 50%+' },
+        { url: "/new-arrivals", title: "Ưu Đãi Giá SỐC - OFF tới 50%+" },
       ],
       productCarouselSettings: {
         slidesToShow: 5,
@@ -1571,45 +1570,45 @@ export default {
       },
       sampleQuestions: [
         {
-          question: 'Này là trên li hay trên bông?',
-          answer: 'TRẢ LỜI',
-          author: 'Ngọc Trinh vào 23:52, 17/12/2023',
-          date: 'TRẢ LỜI',
+          question: "Này là trên li hay trên bông?",
+          answer: "TRẢ LỜI",
+          author: "Ngọc Trinh vào 23:52, 17/12/2023",
+          date: "TRẢ LỜI",
         },
         {
           question:
-            'Hôm nay đá hàng thị trường ngay 2 ngày có nhắn dược không à?',
-          answer: 'TRẢ LỜI',
-          author: 'Lái Thị Trà My vào 10:50, 26/06/2023',
-          date: 'TRẢ LỜI',
+            "Hôm nay đá hàng thị trường ngay 2 ngày có nhắn dược không à?",
+          answer: "TRẢ LỜI",
+          author: "Lái Thị Trà My vào 10:50, 26/06/2023",
+          date: "TRẢ LỜI",
         },
         {
-          question: 'Có nhieu mau không à?',
-          answer: 'TRẢ LỜI',
-          author: 'Quách Diệu Trà vào 03:19, 16/06/2023',
-          date: 'TRẢ LỜI',
+          question: "Có nhieu mau không à?",
+          answer: "TRẢ LỜI",
+          author: "Quách Diệu Trà vào 03:19, 16/06/2023",
+          date: "TRẢ LỜI",
         },
         {
-          question: 'Màu đỏ đat co sang da không à?',
-          answer: 'TRẢ LỜI',
-          author: 'Trần Tiến vào 07:37, 07/05/2023',
-          date: 'TRẢ LỜI',
+          question: "Màu đỏ đat co sang da không à?",
+          answer: "TRẢ LỜI",
+          author: "Trần Tiến vào 07:37, 07/05/2023",
+          date: "TRẢ LỜI",
         },
       ],
       comments: [
         {
-          name: 'Ngọc Anh',
+          name: "Ngọc Anh",
           stars: 5,
           content:
-            'Son rất đẹp, màu lên chuẩn, mùi thơm dễ chịu. Giao hàng nhanh!',
-          date: '2 ngày trước',
+            "Son rất đẹp, màu lên chuẩn, mùi thơm dễ chịu. Giao hàng nhanh!",
+          date: "2 ngày trước",
         },
         {
-          name: 'Thu Hằng',
+          name: "Thu Hằng",
           stars: 4,
           content:
-            'Chất son mịn, hơi khô nhẹ nếu không dưỡng môi trước, nói chung ok.',
-          date: '5 ngày trước',
+            "Chất son mịn, hơi khô nhẹ nếu không dưỡng môi trước, nói chung ok.",
+          date: "5 ngày trước",
         },
       ],
       starData: {
@@ -1624,388 +1623,428 @@ export default {
       productsGiftToLove: [
         {
           id: 1,
-          url: '#',
-          name: 'Vợt Pickleball Proton Series 3 Project Flamingo Paddle Màu Đen Phối Hồng',
-          price: '6.990.000',
-          oldPrice: '7.600.000',
+          url: "#",
+          name: "Vợt Pickleball Proton Series 3 Project Flamingo Paddle Màu Đen Phối Hồng",
+          price: "6.990.000",
+          oldPrice: "7.600.000",
           discount: 8,
-          image: require('@/assets/images/giftToLove/vot-pickleball-proton-series-3-project-flamingo-paddle-mau-den-phoi-hong-67f74103eba61-10042025105443.webp'),
+          image: require("@/assets/images/giftToLove/vot-pickleball-proton-series-3-project-flamingo-paddle-mau-den-phoi-hong-67f74103eba61-10042025105443.webp"),
         },
         {
           id: 2,
-          url: '#',
-          name: 'Son Tom Ford Love Lip Color Matte Limited Edition TF 16 Scarlet Rouge Màu Đỏ Thuần',
-          price: '1.050.000',
-          oldPrice: '1.800.000',
+          url: "#",
+          name: "Son Tom Ford Love Lip Color Matte Limited Edition TF 16 Scarlet Rouge Màu Đỏ Thuần",
+          price: "1.050.000",
+          oldPrice: "1.800.000",
           discount: 41,
-          image: require('@/assets/images/giftToLove/son-tom-ford-love-lip-color-matte-limited-edition-tf-16-scarlet-rouge-mau-do-thuan-c_tn-67cf99ae5231e-11032025090222.webp'),
+          image: require("@/assets/images/giftToLove/son-tom-ford-love-lip-color-matte-limited-edition-tf-16-scarlet-rouge-mau-do-thuan-c_tn-67cf99ae5231e-11032025090222.webp"),
         },
         {
           id: 3,
-          url: '#',
-          name: 'Son Lì Dior Velvet 539 Tera Bella Màu Đỏ Cam Đất',
-          price: '950.000',
-          oldPrice: '1.500.000',
+          url: "#",
+          name: "Son Lì Dior Velvet 539 Tera Bella Màu Đỏ Cam Đất",
+          price: "950.000",
+          oldPrice: "1.500.000",
           discount: 36,
-          image: require('@/assets/images/giftToLove/son-li-dior-velvet-539-tera-bella-mau-do-cam-dat-68dde569cfcdb-02102025093729.webp'),
+          image: require("@/assets/images/giftToLove/son-li-dior-velvet-539-tera-bella-mau-do-cam-dat-68dde569cfcdb-02102025093729.webp"),
         },
         {
           id: 4,
-          url: '#',
-          name: 'Kính Mát Rayban Sunglasses RB4391D 645087 65-18 Màu Xám',
-          price: '3.050.000',
-          oldPrice: '3.800.000',
+          url: "#",
+          name: "Kính Mát Rayban Sunglasses RB4391D 645087 65-18 Màu Xám",
+          price: "3.050.000",
+          oldPrice: "3.800.000",
           discount: 19,
-          image: require('@/assets/images/giftToLove/kinh-mat-rayban-sunglasses-rb4391d-645087-65-18-mau-xam-68bf87e0248e7-09092025085024.webp'),
+          image: require("@/assets/images/giftToLove/kinh-mat-rayban-sunglasses-rb4391d-645087-65-18-mau-xam-68bf87e0248e7-09092025085024.webp"),
         },
         {
           id: 5,
-          url: '#',
-          name: 'Giày Tennis/Pickleball Skechers Viper Court Pro 172069C-LAV Màu Tím Size 38',
-          price: '3.750.000',
-          oldPrice: '5.000.000',
+          url: "#",
+          name: "Giày Tennis/Pickleball Skechers Viper Court Pro 172069C-LAV Màu Tím Size 38",
+          price: "3.750.000",
+          oldPrice: "5.000.000",
           discount: 25,
-          image: require('@/assets/images/giftToLove/giay-tennis-pickleball-skechers-viper-court-pro-172069c-lav-mau-tim-size-36-68ce0e3c34595-20092025091524.webp'),
+          image: require("@/assets/images/giftToLove/giay-tennis-pickleball-skechers-viper-court-pro-172069c-lav-mau-tim-size-36-68ce0e3c34595-20092025091524.webp"),
         },
         {
           id: 6,
-          url: '#',
-          name: 'Kính Mát Rayban Caravan RB3136 001/51 55mm Màu Nâu',
-          price: '3.100.000',
-          oldPrice: '4.000.000',
+          url: "#",
+          name: "Kính Mát Rayban Caravan RB3136 001/51 55mm Màu Nâu",
+          price: "3.100.000",
+          oldPrice: "4.000.000",
           discount: 22,
-          image: require('@/assets/images/giftToLove/kinh-mat-rayban-caravan-rb3136-001-51-mau-nau-685f50dda0acd-28062025091805.webp'),
+          image: require("@/assets/images/giftToLove/kinh-mat-rayban-caravan-rb3136-001-51-mau-nau-685f50dda0acd-28062025091805.webp"),
         },
         {
           id: 7,
-          url: '#',
-          name: 'Túi Đeo Chéo Nữ Marc Jacobs The Croc-embossed Snapshot Màu Đen',
-          price: '6.290.000',
-          oldPrice: '8.900.000',
+          url: "#",
+          name: "Túi Đeo Chéo Nữ Marc Jacobs The Croc-embossed Snapshot Màu Đen",
+          price: "6.290.000",
+          oldPrice: "8.900.000",
           discount: 29,
-          image: require('@/assets/images/giftToLove/tui-deo-cheo-nu-marc-jacobs-the-croc-embossed-snapshot-mau-den-6802fb031ccdf-19042025082315.webp'),
+          image: require("@/assets/images/giftToLove/tui-deo-cheo-nu-marc-jacobs-the-croc-embossed-snapshot-mau-den-6802fb031ccdf-19042025082315.webp"),
         },
         {
           id: 8,
-          url: '#',
-          name: 'Kính Mát Rayban Sunglasses RB4391D 601/80 65-18 Màu Xanh Blue/Đen',
-          price: '3.050.000',
-          oldPrice: '3.800.000',
+          url: "#",
+          name: "Kính Mát Rayban Sunglasses RB4391D 601/80 65-18 Màu Xanh Blue/Đen",
+          price: "3.050.000",
+          oldPrice: "3.800.000",
           discount: 19,
-          image: require('@/assets/images/giftToLove/kinh-mat-rayban-sunglasses-rb4391d-601-80-65-18-mau-xanh-blue-den-68bf81e10741c-09092025082449.webp'),
+          image: require("@/assets/images/giftToLove/kinh-mat-rayban-sunglasses-rb4391d-601-80-65-18-mau-xanh-blue-den-68bf81e10741c-09092025082449.webp"),
         },
         {
           id: 9,
-          url: '#',
-          name: 'Mũ MLB Varsity Boston Red Sox 3ACPVV04N-43GNS Màu Xanh Green',
-          price: '1.090.000',
-          oldPrice: '1.900.000',
+          url: "#",
+          name: "Mũ MLB Varsity Boston Red Sox 3ACPVV04N-43GNS Màu Xanh Green",
+          price: "1.090.000",
+          oldPrice: "1.900.000",
           discount: 42,
-          image: require('@/assets/images/giftToLove/mu-mlb-varsity-boston-red-sox-3acpvv04n-43gns-mau-xanh-green-67d27aa9c6597-13032025132649.webp'),
+          image: require("@/assets/images/giftToLove/mu-mlb-varsity-boston-red-sox-3acpvv04n-43gns-mau-xanh-green-67d27aa9c6597-13032025132649.webp"),
         },
       ],
       // Suggested products
       productsSuggest: [
         {
-          name: 'Nước Hoa Unisex Fragrance World Maison Vaporisateur Barakkat Rouge 540 Extrait De Parfum 100ml',
-          url: '/fragrance-world-maison-vaporisateur-barakkat-rouge-540-extrait-de-parfum-100ml-ph085936',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-unisex-fragrance-world-maison-vaporisateur-barakkat-rouge-540-extrait-de-parfum-100ml-64376521e8cff-13042023091249.webp'),
-          price: '490.000',
-          oldPrice: '950.000',
+          name: "Nước Hoa Unisex Fragrance World Maison Vaporisateur Barakkat Rouge 540 Extrait De Parfum 100ml",
+          url: "/fragrance-world-maison-vaporisateur-barakkat-rouge-540-extrait-de-parfum-100ml-ph085936",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-unisex-fragrance-world-maison-vaporisateur-barakkat-rouge-540-extrait-de-parfum-100ml-64376521e8cff-13042023091249.webp"),
+          price: "490.000",
+          oldPrice: "950.000",
           discount: 48,
         },
         {
-          name: 'Nước Hoa Nam Nautica Voyage EDT 100ml Tinh Te',
-          url: '/nuoc-hoa-nam-nautica-voyage-edt-100ml-tinh-te-ph169951',
-          image: require('@/assets/images/listProduct/suggest/nuo-c-hoa-nam-nautica-voyage-edt-100ml-66e7aaacf1efd-16092024104900.webp'),
-          price: '850.000',
-          oldPrice: '1.500.000',
+          name: "Nước Hoa Nam Nautica Voyage EDT 100ml Tinh Te",
+          url: "/nuoc-hoa-nam-nautica-voyage-edt-100ml-tinh-te-ph169951",
+          image: require("@/assets/images/listProduct/suggest/nuo-c-hoa-nam-nautica-voyage-edt-100ml-66e7aaacf1efd-16092024104900.webp"),
+          price: "850.000",
+          oldPrice: "1.500.000",
           discount: 43,
         },
         {
-          name: 'Nước Hoa Nam Nautica Voyage EDT 100ml',
-          url: '/nautica-voyage-edt-100ml-ph033274',
-          image: require('@/assets/images/listProduct/suggest/nuo-c-hoa-nam-nautica-voyage-edt-100ml-61359a4222f30-06092021113410.webp'),
-          price: '645.000',
-          oldPrice: '1.050.000',
+          name: "Nước Hoa Nam Nautica Voyage EDT 100ml",
+          url: "/nautica-voyage-edt-100ml-ph033274",
+          image: require("@/assets/images/listProduct/suggest/nuo-c-hoa-nam-nautica-voyage-edt-100ml-61359a4222f30-06092021113410.webp"),
+          price: "645.000",
+          oldPrice: "1.050.000",
           discount: 39,
         },
         {
-          name: 'Vòng Đeo Tay Nữ Swarovski Teddy Bracelet Bear Pink Rose Gold-Tone Plated 5669169 Mau Hong',
-          url: '/vong-deo-tay-swarovski-teddy-bracelet-bear-pink-rose-gold-tone-plated-5669169-mau-hong-ph198167',
-          image: require('@/assets/images/listProduct/suggest/vong-deo-tay-nu-swarovski-teddy-bracelet-bear-pink-rose-gold-tone-plated-5669169-mau-hong-65ded6c1184c8-28022024134625.webp'),
-          price: '4.254.000',
-          oldPrice: '5.900.000',
+          name: "Vòng Đeo Tay Nữ Swarovski Teddy Bracelet Bear Pink Rose Gold-Tone Plated 5669169 Mau Hong",
+          url: "/vong-deo-tay-swarovski-teddy-bracelet-bear-pink-rose-gold-tone-plated-5669169-mau-hong-ph198167",
+          image: require("@/assets/images/listProduct/suggest/vong-deo-tay-nu-swarovski-teddy-bracelet-bear-pink-rose-gold-tone-plated-5669169-mau-hong-65ded6c1184c8-28022024134625.webp"),
+          price: "4.254.000",
+          oldPrice: "5.900.000",
           discount: 28,
         },
         {
-          name: 'Sữa Tắm Hương Nước Hoa Armaf Club De Nuit Iconic 360ml',
-          url: '/sua-tam-huong-nuoc-hoa-armaf-club-de-nuit-iconic-360ml-ph208772',
-          image: require('@/assets/images/listProduct/suggest/sua-tam-huong-nuoc-hoa-armaf-club-de-nuit-iconic-360ml-6888706a517ff-29072025135538.webp'),
-          price: '470.000',
-          oldPrice: '990.000',
+          name: "Sữa Tắm Hương Nước Hoa Armaf Club De Nuit Iconic 360ml",
+          url: "/sua-tam-huong-nuoc-hoa-armaf-club-de-nuit-iconic-360ml-ph208772",
+          image: require("@/assets/images/listProduct/suggest/sua-tam-huong-nuoc-hoa-armaf-club-de-nuit-iconic-360ml-6888706a517ff-29072025135538.webp"),
+          price: "470.000",
+          oldPrice: "990.000",
           discount: 53,
         },
         {
-          name: 'Nước Hoa Nam Versace Pour Homme EDT 100ml',
-          url: '/nuoc-hoa-versace-pour-homme-100ml-ph003824',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-nam-versace-pour-homme-edt-100ml-67370dec145e5-15112024160132.webp'),
-          price: '1.370.000',
-          oldPrice: '2.400.000',
+          name: "Nước Hoa Nam Versace Pour Homme EDT 100ml",
+          url: "/nuoc-hoa-versace-pour-homme-100ml-ph003824",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-nam-versace-pour-homme-edt-100ml-67370dec145e5-15112024160132.webp"),
+          price: "1.370.000",
+          oldPrice: "2.400.000",
           discount: 43,
         },
         {
-          name: 'Nước Hoa Unisex Maison Francis Kurkdjian Baccarat Rouge 540 Extrait De Parfum 70ml',
-          url: '/nuoc-hoa-maison-francis-kurkdjian-baccarat-rouge-540-extrait-de-parfum-ph025838',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-maison-francis-kurkdjian-baccarat-rouge-540-extrait-de-parfum-70ml-62184af34d44c-25022022102019.webp'),
-          price: '8.600.000',
-          oldPrice: '12.000.000',
+          name: "Nước Hoa Unisex Maison Francis Kurkdjian Baccarat Rouge 540 Extrait De Parfum 70ml",
+          url: "/nuoc-hoa-maison-francis-kurkdjian-baccarat-rouge-540-extrait-de-parfum-ph025838",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-maison-francis-kurkdjian-baccarat-rouge-540-extrait-de-parfum-70ml-62184af34d44c-25022022102019.webp"),
+          price: "8.600.000",
+          oldPrice: "12.000.000",
           discount: 28,
         },
         {
-          name: 'Set Trang Diem Dior Miss Dior Gift Set 5 Mon',
-          url: '/set-trang-diem-dior-miss-dior-gift-set-5-mon-ph217929',
-          image: require('@/assets/images/listProduct/suggest/set-trang-diem-dior-miss-dior-gift-set-5-mon-68d34c27e6129-24092025084055.webp'),
-          price: '1.200.000',
-          oldPrice: '1.900.000',
+          name: "Set Trang Diem Dior Miss Dior Gift Set 5 Mon",
+          url: "/set-trang-diem-dior-miss-dior-gift-set-5-mon-ph217929",
+          image: require("@/assets/images/listProduct/suggest/set-trang-diem-dior-miss-dior-gift-set-5-mon-68d34c27e6129-24092025084055.webp"),
+          price: "1.200.000",
+          oldPrice: "1.900.000",
           discount: 37,
         },
         {
-          name: 'Nước Hoa Calvin Klein CK One Cho Ca Nam Va Nu 100ml',
-          url: '/calvin-klein-ck-one-edt-100ml-ph000511',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-calvin-klein-ck-ck-one-cho-ca-nam-va-nu-100ml-6666827566326-10062024113501.webp'),
-          price: '539.000',
-          oldPrice: '1.120.000',
+          name: "Nước Hoa Calvin Klein CK One Cho Ca Nam Va Nu 100ml",
+          url: "/calvin-klein-ck-one-edt-100ml-ph000511",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-calvin-klein-ck-ck-one-cho-ca-nam-va-nu-100ml-6666827566326-10062024113501.webp"),
+          price: "539.000",
+          oldPrice: "1.120.000",
           discount: 52,
         },
         {
-          name: 'Set Son Va Nuoc Hoa Dior Beauty Mini 3 Mon Kem Tui',
-          url: '/set-son-va-nuoc-hoa-dior-beauty-mini-3-mon-kem-tui-ph220668',
-          image: require('@/assets/images/listProduct/suggest/set-son-va-nuoc-hoa-dior-beauty-mini-3-mon-kem-tui-68e6258620ebc-08102025154910.webp'),
-          price: '1.050.000',
-          oldPrice: '1.790.000',
+          name: "Set Son Va Nuoc Hoa Dior Beauty Mini 3 Mon Kem Tui",
+          url: "/set-son-va-nuoc-hoa-dior-beauty-mini-3-mon-kem-tui-ph220668",
+          image: require("@/assets/images/listProduct/suggest/set-son-va-nuoc-hoa-dior-beauty-mini-3-mon-kem-tui-68e6258620ebc-08102025154910.webp"),
+          price: "1.050.000",
+          oldPrice: "1.790.000",
           discount: 41,
         },
         {
-          name: 'Nước Hoa Nam Versace Eros Man EDT 5ml',
-          url: '/versace-eros-edt-5ml-ph008740',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-versace-eros-cho-nam-say-dam-phai-nu-minisize-5ml-5db936dcd37ed-30102019140812.webp'),
-          price: '199.000',
-          oldPrice: '375.000',
+          name: "Nước Hoa Nam Versace Eros Man EDT 5ml",
+          url: "/versace-eros-edt-5ml-ph008740",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-versace-eros-cho-nam-say-dam-phai-nu-minisize-5ml-5db936dcd37ed-30102019140812.webp"),
+          price: "199.000",
+          oldPrice: "375.000",
           discount: 47,
         },
         {
-          name: 'Nước Hoa Nam Armaf Club De Nuit Intense Man EDT 105ml',
-          url: '/nuoc-hoa-nam-armaf-club-de-nuit-intense-man-eau-de-toilette-105ml-ph162196',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-nam-armaf-club-de-nuit-intense-man-eau-de-toilette-105ml-6711b6a62a9b0-18102024081518.webp'),
-          price: '950.000',
-          oldPrice: '1.800.000',
+          name: "Nước Hoa Nam Armaf Club De Nuit Intense Man EDT 105ml",
+          url: "/nuoc-hoa-nam-armaf-club-de-nuit-intense-man-eau-de-toilette-105ml-ph162196",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-nam-armaf-club-de-nuit-intense-man-eau-de-toilette-105ml-6711b6a62a9b0-18102024081518.webp"),
+          price: "950.000",
+          oldPrice: "1.800.000",
           discount: 47,
         },
         {
-          name: 'Nước Hoa Nam Ralph Lauren Polo Blue EDP 125ml',
-          url: '/nuoc-hoa-ralph-lauren-polo-blue-edp-125ml-ph173084',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-677207c2ecd78-30122024093858.webp'),
-          price: '1.590.000',
-          oldPrice: '3.700.000',
+          name: "Nước Hoa Nam Ralph Lauren Polo Blue EDP 125ml",
+          url: "/nuoc-hoa-ralph-lauren-polo-blue-edp-125ml-ph173084",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-677207c2ecd78-30122024093858.webp"),
+          price: "1.590.000",
+          oldPrice: "3.700.000",
           discount: 57,
         },
         {
-          name: 'Nước Hoa Ralph Lauren Polo Blue EDP Cho Nam 125ml',
-          url: '/nuoc-hoa-ralph-lauren-polo-blue-edp-nam-125ml-ph000421',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-ralph-lauren-polo-blue-edp-cho-nam-125ml-67c134a5d4712-28022025105933.webp'),
-          price: '1.590.000',
-          oldPrice: '2.500.000',
+          name: "Nước Hoa Ralph Lauren Polo Blue EDP Cho Nam 125ml",
+          url: "/nuoc-hoa-ralph-lauren-polo-blue-edp-nam-125ml-ph000421",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-ralph-lauren-polo-blue-edp-cho-nam-125ml-67c134a5d4712-28022025105933.webp"),
+          price: "1.590.000",
+          oldPrice: "2.500.000",
           discount: 36,
         },
         {
-          name: 'Nước Hoa Nam Ralph Lauren Polo Blue EDP 125ml',
-          url: '/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-c-tn-ph171684',
-          image: require('@/assets/images/listProduct/suggest/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-66348bfa5e4c7-03052024140218.webp'),
-          price: '1.850.000',
-          oldPrice: '3.000.000',
+          name: "Nước Hoa Nam Ralph Lauren Polo Blue EDP 125ml",
+          url: "/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-c-tn-ph171684",
+          image: require("@/assets/images/listProduct/suggest/nuoc-hoa-nam-ralph-lauren-polo-blue-edp-125ml-66348bfa5e4c7-03052024140218.webp"),
+          price: "1.850.000",
+          oldPrice: "3.000.000",
           discount: 38,
         },
       ],
       categoriesSearch: [
         {
-          name: 'Nước Hoa',
-          icon: require('@/assets/images/category/1614234988_Nuoc_hoa_Perfume.webp'),
-          link: '/category/nuoc-hoa',
+          name: "Nước Hoa",
+          icon: require("@/assets/images/category/1614234988_Nuoc_hoa_Perfume.webp"),
+          link: "/category/nuoc-hoa",
         },
         {
-          name: 'Nước Hoa Nam',
-          icon: require('@/assets/images/category/1752560727_nuoc-hoa-nam.webp'),
-          link: '/category/nuoc-hoa-nam',
+          name: "Nước Hoa Nam",
+          icon: require("@/assets/images/category/1752560727_nuoc-hoa-nam.webp"),
+          link: "/category/nuoc-hoa-nam",
         },
         {
-          name: 'Nước Hoa Nữ',
-          icon: require('@/assets/images/category/1752560745_nuoc-hoa-nu.webp'),
-          link: '/category/nuoc-hoa-nu',
+          name: "Nước Hoa Nữ",
+          icon: require("@/assets/images/category/1752560745_nuoc-hoa-nu.webp"),
+          link: "/category/nuoc-hoa-nu",
         },
         {
-          name: 'Đồng Hồ',
-          icon: require('@/assets/images/category/1614234709_dong-do-chinh-hang.webp'),
-          link: '/category/dong-ho',
+          name: "Đồng Hồ",
+          icon: require("@/assets/images/category/1614234709_dong-do-chinh-hang.webp"),
+          link: "/category/dong-ho",
         },
         {
-          name: 'Mũ Nón',
-          icon: require('@/assets/images/category/1614235850_mu_non_caps.webp'),
-          link: '/category/mu-non',
+          name: "Mũ Nón",
+          icon: require("@/assets/images/category/1614235850_mu_non_caps.webp"),
+          link: "/category/mu-non",
         },
         {
-          name: 'Mỹ Phẩm',
-          icon: require('@/assets/images/category/1614236856_my_pham-Cosmetics.webp'),
-          link: '/category/my-pham',
+          name: "Mỹ Phẩm",
+          icon: require("@/assets/images/category/1614236856_my_pham-Cosmetics.webp"),
+          link: "/category/my-pham",
         },
         {
-          name: 'Kem Chống Nắng',
-          icon: require('@/assets/images/category/1642492758_kem-chong-nang.webp'),
-          link: '/category/kem-chong-nang',
+          name: "Kem Chống Nắng",
+          icon: require("@/assets/images/category/1642492758_kem-chong-nang.webp"),
+          link: "/category/kem-chong-nang",
         },
         {
-          name: 'Giày Nam',
-          icon: require('@/assets/images/category/1642494665_shoes.webp'),
-          link: '/category/giay-nam',
+          name: "Giày Nam",
+          icon: require("@/assets/images/category/1642494665_shoes.webp"),
+          link: "/category/giay-nam",
         },
         {
-          name: 'Son Môi',
-          icon: require('@/assets/images/category/1642492020_lipstick.webp'),
-          link: '/category/son-moi',
+          name: "Son Môi",
+          icon: require("@/assets/images/category/1642492020_lipstick.webp"),
+          link: "/category/son-moi",
         },
         {
-          name: 'Loa Bluetooth',
-          icon: require('@/assets/images/category/1744624289_loa-bluetooth.webp'),
-          link: '/category/loa-bluetooth',
+          name: "Loa Bluetooth",
+          icon: require("@/assets/images/category/1744624289_loa-bluetooth.webp"),
+          link: "/category/loa-bluetooth",
         },
         {
-          name: 'Tai Nghe',
-          icon: require('@/assets/images/category/1744685875_tai-nghe-bluetooth.webp'),
-          link: '/category/tai-nghe',
+          name: "Tai Nghe",
+          icon: require("@/assets/images/category/1744685875_tai-nghe-bluetooth.webp"),
+          link: "/category/tai-nghe",
         },
         {
-          name: 'Túi Xách',
-          icon: require('@/assets/images/category/1642491921_bag.webp'),
-          link: '/category/tui-xach',
+          name: "Túi Xách",
+          icon: require("@/assets/images/category/1642491921_bag.webp"),
+          link: "/category/tui-xach",
         },
       ],
       brandsSearch: [
         {
-          name: 'Dior',
-          logo: require('@/assets/images/brand/1.webp'),
-          link: '/brand/dior',
+          name: "Dior",
+          logo: require("@/assets/images/brand/1.webp"),
+          link: "/brand/dior",
         },
         {
-          name: 'YSL',
-          logo: require('@/assets/images/brand/2.webp'),
-          link: '/brand/ysl',
+          name: "YSL",
+          logo: require("@/assets/images/brand/2.webp"),
+          link: "/brand/ysl",
         },
         {
-          name: 'Lacoste',
-          logo: require('@/assets/images/brand/3.webp'),
-          link: '/brand/lacoste',
+          name: "Lacoste",
+          logo: require("@/assets/images/brand/3.webp"),
+          link: "/brand/lacoste",
         },
         {
-          name: 'Gucci',
-          logo: require('@/assets/images/brand/4.webp'),
-          link: '/brand/gucci',
+          name: "Gucci",
+          logo: require("@/assets/images/brand/4.webp"),
+          link: "/brand/gucci",
         },
         {
-          name: 'Versace',
-          logo: require('@/assets/images/brand/5.webp'),
-          link: '/brand/versace',
+          name: "Versace",
+          logo: require("@/assets/images/brand/5.webp"),
+          link: "/brand/versace",
         },
         {
-          name: 'Armaf',
-          logo: require('@/assets/images/brand/6.webp'),
-          link: '/brand/armaf',
+          name: "Armaf",
+          logo: require("@/assets/images/brand/6.webp"),
+          link: "/brand/armaf",
         },
         {
-          name: 'Adidas',
-          logo: require('@/assets/images/brand/7.webp'),
-          link: '/brand/adidas',
+          name: "Adidas",
+          logo: require("@/assets/images/brand/7.webp"),
+          link: "/brand/adidas",
         },
         {
-          name: 'CK',
-          logo: require('@/assets/images/brand/8.webp'),
-          link: '/brand/ck',
+          name: "CK",
+          logo: require("@/assets/images/brand/8.webp"),
+          link: "/brand/ck",
         },
         {
-          name: 'Nike',
-          logo: require('@/assets/images/brand/9.webp'),
-          link: '/brand/nike',
+          name: "Nike",
+          logo: require("@/assets/images/brand/9.webp"),
+          link: "/brand/nike",
         },
         {
-          name: 'Chanel',
-          logo: require('@/assets/images/brand/10.webp'),
-          link: '/brand/chanel',
+          name: "Chanel",
+          logo: require("@/assets/images/brand/10.webp"),
+          link: "/brand/chanel",
         },
         {
-          name: 'Swarovski',
-          logo: require('@/assets/images/brand/11.webp'),
-          link: '/brand/swarovski',
+          name: "Swarovski",
+          logo: require("@/assets/images/brand/11.webp"),
+          link: "/brand/swarovski",
         },
         {
-          name: 'MLB',
-          logo: require('@/assets/images/brand/12.webp'),
-          link: '/brand/mlb',
+          name: "MLB",
+          logo: require("@/assets/images/brand/12.webp"),
+          link: "/brand/mlb",
         },
       ],
       productImages: [],
       otherProducts: [],
-      activeTab: 'details',
+      activeTab: "details",
       productSelected: null,
-    }
+    };
   },
   created() {
-    const productId = this.$route.params.id
+    const productId = this.$route.params.id;
     this.productSelected = products.find(
       (product) => product.id === parseInt(productId)
-    )
+    );
     if (this.productSelected) {
-      this.productImages = this.productSelected.productImages
-      this.otherProducts = this.productSelected.otherProducts
+      this.productImages = this.productSelected.productImages;
+      this.otherProducts = this.productSelected.otherProducts;
     }
   },
   methods: {
     setActiveSlide(index) {
-      const carousel = document.querySelector('#productCarousel')
-      const bsCarousel = new bootstrap.Carousel(carousel)
-      bsCarousel.to(index)
+      const carousel = document.querySelector("#productCarousel");
+      const bsCarousel = new bootstrap.Carousel(carousel);
+      bsCarousel.to(index);
     },
 
     // Trả về số lượt đánh giá theo sao
     getCount(star) {
-      return this.starData && this.starData[star] ? this.starData[star] : 0
+      // return this.starData && this.starData[star] ? this.starData[star] : 0; -->
+        return Math.floor(Math.random() * 5);
     },
 
     // Tính phần trăm chiều rộng thanh rating
     getPercent(star) {
-      if (!this.starData) return 0
+      if (!this.starData) return 0;
       const total = Object.values(this.starData).reduce(
         (sum, val) => sum + val,
         0
-      )
-      const count = this.getCount(star)
-      return total > 0 ? (count / total) * 100 : 0
+      );
+      const count = this.getCount(star);
+      return total > 0 ? (count / total) * 100 : 0;
     },
     saveAnswer(index) {
       // Logic để lưu câu trả lời (có thể gửi lên server hoặc cập nhật state)
-      this.$emit('update-answer', {
+      this.$emit("update-answer", {
         index,
         answer: this.questions[index].answer,
-      })
+      });
     },
   },
-}
+};
 </script>
+
+<style>
+img.product-img-responsive {
+  width: -webkit-fill-available !important;
+}
+</style>
 <style scoped>
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+  .row{
+    margin: auto;
+    padding: 0;
+  }
+  .w-50.ps-3 {
+    width: 100% !important;
+    padding: 20px 0 !important;
+  }
+
+  .w-50.pe-3 {
+    width: 100% !important;
+    padding: 20px 0 !important;
+  }
+
+  .d-flex.product-price {
+    flex-direction: column;
+    padding: 20px 0 !important;
+  }
+
+  .product-description{
+    flex-direction: column-reverse ;
+    padding: 20px 0 !important;
+  }
+
+  .tab-content.p-4.border{
+    padding: 15px !important;
+  }
+}
 .rating-star-list {
   /* Add custom star rating styles */
   display: inline-block;
   width: 100px;
   height: 20px;
-  background: url('/assets/images/stars.png') 0 calc(-20px * var(--rating-star)) /
+  background: url("/assets/images/stars.png") 0 calc(-20px * var(--rating-star)) /
     100px 100px no-repeat;
 }
 
